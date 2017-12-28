@@ -116,7 +116,7 @@ public class SimpleCustomizableTextView: UITextView {
     @IBInspectable public var barItemTitleColor: UIColor = UIColor.black {
         didSet {
             doneButton.setTitleTextAttributes([
-                NSForegroundColorAttributeName: barItemTitleColor, NSFontAttributeName: barItemTitleFont], for: .normal)
+                NSAttributedStringKey.foregroundColor: barItemTitleColor, NSAttributedStringKey.font: barItemTitleFont], for: .normal)
         }
     }
     
@@ -135,7 +135,7 @@ public class SimpleCustomizableTextView: UITextView {
     public var barItemTitleFont: UIFont = .systemFont(ofSize: UIFont.buttonFontSize) {
         didSet {
             doneButton.setTitleTextAttributes([
-                NSFontAttributeName: barItemTitleFont, NSForegroundColorAttributeName: barItemTitleColor], for: .normal)
+                NSAttributedStringKey.font: barItemTitleFont, NSAttributedStringKey.foregroundColor: barItemTitleColor], for: .normal)
         }
     }
     
